@@ -39,15 +39,17 @@
       <file leaf-file-name="AnswerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tw/core/AnswerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+            <state relative-caret-position="492">
+              <caret line="51" selection-start-line="51" selection-end-line="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#205#206#0" expanded="true" />
                 <element signature="e#266#267#0" expanded="true" />
+                <element signature="method#should_out_put_a_number_String_when_call_toString#0;class#AnswerTest#0" />
                 <element signature="method#should_create_an_Answer_with_a_number_list_by_createAnswer_when_give_a_String#0;class#AnswerTest#0" />
                 <element signature="method#should_be_successful_when_give_a_String_with_right_format#0;class#AnswerTest#0" />
                 <element signature="method#should_successfully_validate_when_give_a_String_with_right_format#1;class#AnswerTest#0" />
+                <element signature="method#should_get_a_Record_by_check_when_give_a_String#0;class#AnswerTest#0" />
               </folding>
             </state>
           </provider>
@@ -56,12 +58,14 @@
       <file leaf-file-name="Answer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tw/core/Answer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+            <state relative-caret-position="222">
+              <caret line="54" column="28" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="28" />
               <folding>
                 <element signature="e#384#385#0" expanded="true" />
                 <element signature="e#422#423#0" expanded="true" />
+                <element signature="method#createAnswer#0;class#Answer#0" />
                 <element signature="method#validate#0;class#Answer#0" />
+                <element signature="method#check#0;class#Answer#0" />
                 <element signature="e#1567#1568#0" expanded="true" />
                 <element signature="e#1615#1616#0" expanded="true" />
                 <element signature="e#1661#1662#0" expanded="true" />
@@ -599,11 +603,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AnswerTest.should_out_put_a_number_String_when_call_toString">
+  <component name="RunManager" selected="JUnit.AnswerTest.should_get_the_right_index_when_call_getIndexOfNum">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="AnswerTest.should_create_an_Answer_with_a_number_list_by_createAnswer_when_give_a_String" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnswerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-java-base_test" />
       <extension name="coverage">
         <pattern>
@@ -615,8 +619,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="tw.core" />
       <option name="MAIN_CLASS_NAME" value="tw.core.AnswerTest" />
-      <option name="METHOD_NAME" value="should_create_an_Answer_with_a_number_list_by_createAnswer_when_give_a_String" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -649,6 +653,29 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="AnswerTest.should_get_the_right_index_when_call_getIndexOfNum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd-java-base_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tw.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tw.core" />
+      <option name="MAIN_CLASS_NAME" value="tw.core.AnswerTest" />
+      <option name="METHOD_NAME" value="should_get_the_right_index_when_call_getIndexOfNum" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="AnswerTest.should_out_put_a_number_String_when_call_toString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-java-base_test" />
       <extension name="coverage">
@@ -662,29 +689,6 @@
       <option name="PACKAGE_NAME" value="tw.core" />
       <option name="MAIN_CLASS_NAME" value="tw.core.AnswerTest" />
       <option name="METHOD_NAME" value="should_out_put_a_number_String_when_call_toString" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="AnswerTest.should_successfully_validate_when_give_a_String_with_right_format" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tdd-java-base_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tw.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tw.core" />
-      <option name="MAIN_CLASS_NAME" value="tw.core.AnswerTest" />
-      <option name="METHOD_NAME" value="should_successfully_validate_when_give_a_String_with_right_format" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -767,19 +771,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.AnswerTest.should_create_an_Answer_with_a_number_list_by_createAnswer_when_give_a_String" />
-      <item itemvalue="JUnit.AnswerTest.should_successfully_validate_when_give_a_String_with_right_format" />
       <item itemvalue="JUnit.AnswerTest.should_successfully_validate_when_give_a_String_with_wrong_format" />
       <item itemvalue="JUnit.AnswerTest.should_get_a_Record_by_check_when_give_a_String" />
       <item itemvalue="JUnit.AnswerTest.should_out_put_a_number_String_when_call_toString" />
+      <item itemvalue="JUnit.AnswerTest" />
+      <item itemvalue="JUnit.AnswerTest.should_get_the_right_index_when_call_getIndexOfNum" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnswerTest.should_get_the_right_index_when_call_getIndexOfNum" />
+        <item itemvalue="JUnit.AnswerTest" />
         <item itemvalue="JUnit.AnswerTest.should_out_put_a_number_String_when_call_toString" />
         <item itemvalue="JUnit.AnswerTest.should_get_a_Record_by_check_when_give_a_String" />
         <item itemvalue="JUnit.AnswerTest.should_successfully_validate_when_give_a_String_with_wrong_format" />
-        <item itemvalue="JUnit.AnswerTest.should_successfully_validate_when_give_a_String_with_right_format" />
-        <item itemvalue="JUnit.AnswerTest.should_create_an_Answer_with_a_number_list_by_createAnswer_when_give_a_String" />
       </list>
     </recent_temporary>
   </component>
@@ -793,17 +797,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531378117031</updated>
-      <workItem from="1531378119774" duration="7953000" />
+      <workItem from="1531378119774" duration="8291000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AnswerTest_should_create_an_Answer_with_a_number_list_by_createAnswer_when_give_a_String - 2018.07.12 at 17h 10m 45s.xml">
-      <configuration name="AnswerTest.should_create_an_Answer_with_a_number_list_by_createAnswer_when_give_a_String" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AnswerTest_should_successfully_validate_when_give_a_String_with_right_format - 2018.07.12 at 17h 13m 51s.xml">
-      <configuration name="AnswerTest.should_successfully_validate_when_give_a_String_with_right_format" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AnswerTest_should_successfully_validate_when_give_a_String_with_wrong_format - 2018.07.12 at 17h 14m 29s.xml">
       <configuration name="AnswerTest.should_successfully_validate_when_give_a_String_with_wrong_format" configurationId="JUnit" />
     </history-entry>
@@ -828,9 +826,15 @@
     <history-entry file="AnswerTest_should_get_a_Record_by_check_when_give_a_String - 2018.07.12 at 17h 36m 29s.xml">
       <configuration name="AnswerTest.should_get_a_Record_by_check_when_give_a_String" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AnswerTest_should_out_put_a_number_String_when_call_toString - 2018.07.12 at 17h 45m 29s.xml">
+      <configuration name="AnswerTest.should_out_put_a_number_String_when_call_toString" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AnswerTest - 2018.07.12 at 17h 47m 08s.xml">
+      <configuration name="AnswerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7953000" />
+    <option name="totallyTimeSpent" value="8291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -972,22 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tw/core/Answer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding>
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="method#validate#0;class#Answer#0" />
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1661#1662#0" expanded="true" />
-            <element signature="e#1709#1710#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Java/java8_using/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -999,17 +987,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tw/core/Answer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="28" />
+          <folding>
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="method#createAnswer#0;class#Answer#0" />
+            <element signature="method#validate#0;class#Answer#0" />
+            <element signature="method#check#0;class#Answer#0" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1615#1616#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
+            <element signature="e#1709#1710#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tw/core/AnswerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="492">
+          <caret line="51" selection-start-line="51" selection-end-line="52" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#205#206#0" expanded="true" />
             <element signature="e#266#267#0" expanded="true" />
+            <element signature="method#should_out_put_a_number_String_when_call_toString#0;class#AnswerTest#0" />
             <element signature="method#should_create_an_Answer_with_a_number_list_by_createAnswer_when_give_a_String#0;class#AnswerTest#0" />
             <element signature="method#should_be_successful_when_give_a_String_with_right_format#0;class#AnswerTest#0" />
             <element signature="method#should_successfully_validate_when_give_a_String_with_right_format#1;class#AnswerTest#0" />
+            <element signature="method#should_get_a_Record_by_check_when_give_a_String#0;class#AnswerTest#0" />
           </folding>
         </state>
       </provider>

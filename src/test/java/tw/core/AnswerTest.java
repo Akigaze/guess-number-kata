@@ -37,6 +37,23 @@ public class AnswerTest {
     }
 
     @Test
+    public void should_get_the_right_index_when_call_getIndexOfNum(){
+        //give
+        Answer answer=new Answer();
+        String[] number=new String[]{"1","2","4","8"};
+        answer.setNumList(Arrays.asList(number));
+        int index1=2;
+        int index2=3;
+        //when
+        int result1=answer.getIndexOfNum("4");
+        int result2=answer.getIndexOfNum("8");
+        //then
+        assertThat(index1,is(result1));
+        assertThat(index2,is(result2));
+
+    }
+
+    @Test
     public void should_create_an_Answer_with_a_number_list_by_createAnswer_when_give_a_String(){
         //give
         String input="       5 2 8 4";
@@ -93,8 +110,8 @@ public class AnswerTest {
         String result="1A1B";
         //when
         Record record=actualAnswer.check(answer);
-
         //then
         assertThat(record.getValue(),is(result));
     }
+
 }
