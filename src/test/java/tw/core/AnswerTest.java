@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import tw.core.exception.AnswerFormatIncorrectException;
 import tw.core.model.Record;
 
+import java.util.Arrays;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -19,6 +21,19 @@ public class AnswerTest {
     @BeforeEach
     public void setUp() {
         actualAnswer = Answer.createAnswer("1 2 3 4");
+    }
+
+    @Test
+    public void should_out_put_a_number_String_when_call_toString(){
+        //give
+        Answer answer=new Answer();
+        String[] number=new String[]{"1","2","4","8"};
+        answer.setNumList(Arrays.asList(number));
+        String result="1 2 4 8";
+        //when
+        String actual=answer.toString();
+        //then
+        assertThat(actual,is(result));
     }
 
     @Test
