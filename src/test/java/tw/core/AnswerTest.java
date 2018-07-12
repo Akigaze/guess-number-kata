@@ -4,6 +4,7 @@ package tw.core;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tw.core.exception.AnswerFormatIncorrectException;
+import tw.core.model.Record;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -68,5 +69,17 @@ public class AnswerTest {
                 fail("Answer format is incorrect");
             } catch (AnswerFormatIncorrectException e1) { }
         }
+    }
+
+    @Test
+    public void should_get_a_Record_by_check_when_give_a_String(){
+        //give
+        Answer answer=Answer.createAnswer("1 3 5 6");
+        String result="1A1B";
+        //when
+        Record record=actualAnswer.check(answer);
+
+        //then
+        assertThat(record.getValue(),is(result));
     }
 }
