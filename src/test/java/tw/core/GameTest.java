@@ -7,8 +7,12 @@ import org.junit.jupiter.api.Test;
 import tw.core.generator.AnswerGenerator;
 import tw.core.model.GuessResult;
 
+
+import java.util.List;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -34,6 +38,73 @@ public class GameTest {
         //when
         //then
         assertThat(guess.getResult(), is("4A0B"));
+
+    }
+    //前一次打错，还能进行下一轮
+    @Test
+    public void should_play_again_when_guess_fail() throws Exception {
+        //given
+        GuessResult guess = game.guess(Answer.createAnswer("3 2 3 4"));
+        //when
+        //then
+        try{
+            game.guess(Answer.createAnswer("1 2 3 4"));
+        }catch (Exception e){
+            fail("CAN'T PLAY AGAIN");
+        }
+    }
+
+    @Test
+    public void should_checkCoutinue_return_false_when_guess_succee() throws Exception {
+        //given
+        GuessResult guess = game.guess(Answer.createAnswer("1 2 3 4"));
+        //when
+        boolean result=game.checkCoutinue();
+        //then
+        assertThat(result,is(false));
+    }
+
+    @Test
+    public void should_checkCoutinue_return_true_when_guess_fail() throws Exception {
+        //given
+        GuessResult guess = game.guess(Answer.createAnswer("1 5 3 4"));
+        //when
+        boolean result=game.checkCoutinue();
+        //then
+        assertThat(result,is(true));
+    }
+
+    @Test
+    public void should_get_history_when_guessHistory() throws Exception {
+        //given
+        GuessResult guess1 = game.guess(Answer.createAnswer("1 5 3 4"));
+        GuessResult guess2 = game.guess(Answer.createAnswer("6 5 8 4"));
+
+        //when
+        List<GuessResult> result=game.guessHistory();
+        //then
+        assertThat(result.get(0),is(guess1));
+        assertThat(result.get(1),is(guess2));
+    }
+
+    @Test
+    public void should_be_fail_when_guess_more_than_6_time() throws Exception {
+        //given
+        GuessResult guess1 = game.guess(Answer.createAnswer("9 5 3 4"));
+        GuessResult guess2 = game.guess(Answer.createAnswer("6 5 7 4"));
+        GuessResult guess3 = game.guess(Answer.createAnswer("9 5 3 4"));
+        GuessResult guess4 = game.guess(Answer.createAnswer("9 5 3 4"));
+        GuessResult guess5 = game.guess(Answer.createAnswer("9 5 3 4"));
+        GuessResult guess6 = game.guess(Answer.createAnswer("9 5 3 4"));
+
+        //when
+        //then
+        try {
+            game.guess(Answer.createAnswer("9 5 3 4"));
+            fail("Guess count cant over 6!");
+        }catch (Exception e){
+
+        }
 
     }
 
